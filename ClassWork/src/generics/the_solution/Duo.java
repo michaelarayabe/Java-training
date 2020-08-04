@@ -1,6 +1,6 @@
 package generics.the_solution;
 
-public class Duo<E> {
+public class Duo<E> implements DuoUtility {
 
     private E first;
     private E second;
@@ -32,5 +32,13 @@ public class Duo<E> {
         E temp = second;
         second = first;
         first = temp;
+    }
+
+    @Override
+    public String toString() {
+        return "Duo{" +
+                "first=" + first +
+                ", second=" + second +
+                '}';
     }
 }
